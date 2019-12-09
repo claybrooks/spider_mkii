@@ -1,0 +1,492 @@
+<FxBanks>
+    <FxBank id="1">
+        
+        <Model name="RED_COMP" id="1"> 
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="sensitivity" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="level" />
+        </Model>
+        
+        <Model name ="FUZZY_PI" id="2">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="tone" />
+        </Model>
+
+        <Model name ="BLUE_COMP" id="22">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="sustain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="level" />
+        </Model>
+
+        <Model name ="BLUE_COMP_TREB" id="23">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="sustain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="level" />
+        </Model>
+
+        <Model name ="VETTA_COMP" id="29">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="sensitivity" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="level" />
+        </Model>
+
+        <Model name ="L6_COMP" id="28">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="1" name="threshold" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="gain" />
+        </Model>
+
+        <Model name ="VETTA_JUICE" id="30">
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="amount" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="level" />
+        </Model>
+
+        <Model name ="BOOST_PLUG_EQ" id="31">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="bass" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="treble" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="mid" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="1" name="mid frequency" />
+        </Model>
+
+        <Model name ="SCREAMER" id="33">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="tone" />
+        </Model>
+
+        <Model name ="TUBE_DRIVE" id="34">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="treble" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="bass" />
+        </Model>
+
+        <Model name ="CLASSIC_DIST" id="25">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="tone" />
+        </Model>
+
+        <Model name ="KILLER_Z" id="27">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="contour" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="mid" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="1" name="mid frequency" />
+        </Model>
+
+        <Model name ="FACIAL_FUZZ" id="26">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="tone" />
+        </Model>
+
+        <Model name ="OCTAVE_FUZZ" id="32">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="gain" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="tone" />
+        </Model>
+
+        <Model name ="BRONZE_MONSTER" id="24">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="tone" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="blend" />
+        </Model>
+
+        <Model name ="BASS_OD" id="21">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="bass" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="treble" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="drive" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="gain" />
+        </Model>
+
+        <Model name ="AUTO_WAH" id="3">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="sensitivity" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="Q" />
+        </Model>
+
+        <Model name ="AUTO_SWELL" id="4">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="ramp" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="depth" />
+        </Model>
+
+        <Model name ="CLEAN_SWEEP" id="35">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="decay" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="sensitivity" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="Q" />
+        </Model>
+
+        <Model name ="DINGO_TRON" id="37">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="sensitivity" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="Q" />
+        </Model>
+
+        <Model name ="PITCH_GLIDE" id="5">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="position" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="heel" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="toe" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="mix" />
+            <Setting type="ternary" outer_id="32" id="1" name="fbv control" left="no_ctrl" mid="wahglide" right="volglide" />
+        </Model>
+
+        <Model name ="SMART_HARMONY" id="6">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="multi" outer_id="32" id="2" name="key">
+                <Value id="0"  val="A" />
+                <Value id="1"  val="A#" />
+                <Value id="2"  val="B" />
+                <Value id="3"  val="C" />
+                <Value id="4"  val="C#" />
+                <Value id="5"  val="D" />
+                <Value id="6"  val="D#" />
+                <Value id="7"  val="E" />
+                <Value id="8"  val="F" />
+                <Value id="9"  val="F#" />
+                <Value id="10" val="G" />
+                <Value id="11" val="G#" />
+            </Setting>
+            <Setting type="multi" outer_id="32" id="4" name="scale">
+                <Value id="0"  val="major" />
+                <Value id="1"  val="minor" />
+                <Value id="2"  val="pentatonic major" />
+                <Value id="3"  val="pentatonic minor" />
+                <Value id="4"  val="harmonic major" />
+                <Value id="5"  val="melodic minor" />
+                <Value id="6"  val="whole" />
+                <Value id="7"  val="whole dimension" />
+            </Setting>
+            <Setting type="multi" outer_id="32" id="3" name="shift">
+                <Value id="-8" val="-9th" />
+                <Value id="-7" val="-8th" />
+                <Value id="-6" val="-7th" />
+                <Value id="-5" val="-6th" />
+                <Value id="-4" val="-5th" />
+                <Value id="-3" val="-4th" />
+                <Value id="-2" val="-3rd" />
+                <Value id="-1" val="-2nd" />
+                <Value id="0"  val="None" />
+                <Value id="1"  val="2nd" />
+                <Value id="2"  val="3rd" />
+                <Value id="3"  val="4th" />
+                <Value id="4"  val="5th" />
+                <Value id="5"  val="6th" />
+                <Value id="6"  val="7th" />
+                <Value id="7"  val="8th" />
+                <Value id="8"  val="9th" />
+            </Setting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="mix" />
+        </Model>
+
+        <Model name ="TWO_BAND_EQ" id="38">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F0F70" valueType="db" valueMin="-12.8" valueMax="12.6" outer_id="32" id="2" name="gain 1" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="1" name="mid 1" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F0F70" valueType="db" valueMin="-12.8" valueMax="12.6" outer_id="32" id="4" name="gain 1" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="mid 2" />
+        </Model>
+    </FxBank>
+
+    <!--
+    <FxBank id="2">
+        <Model name="MODEL_SINE_CHORUS" id="7">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_L6_FLANGER" id="8">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_ANALOG_CHORUS" id="39">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_SQUARE_CHORUS" id="45">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_ANALOG_SQUARE_CHORUS" id="40">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_RANDOM_CHORUS" id="44">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_EXPONENTIAL_CHORUS" id="42">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_JET_FLANGER" id="41">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_EXPO_FLANGER" id="43">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_SQUARE_FLANGER" id="46">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_PHASER" id="9">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_U_VIBE" id="10">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_LUMPY_PHASE" id="47">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_WARBLE_MATIC" id="50">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_RANDOM_S_H" id="36">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_TAPE_EATER" id="49">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_PURPLE_X" id="48">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_OPTO_TREMOLO" id="11">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MODEL_BIAS_TREMOLO" id="12">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="pre" />
+                <Value val="0" name="post" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+    </FxBank>
+
+    <FxBank id="3">
+        <Model name="DIGI_DELAY" id="13">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="ANALOG_W_MOD" id="14">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="ANALOG_DELAY" id="51">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="DUAL_DELAY" id="52">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="TAPE_ECHO " id="15">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="MULTI_HEAD" id="16">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="TUBE_ECHO " id="54">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="ECHO_PLATTER" id="53">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="SWEEP_ECHO" id="17">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="REVERSE_DELAY" id="18">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="BUBBLE_ECHO" id="55">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+        <Model name="PHAZE_ECHO" id="56">
+            <Setting type="binary" outer_id="16" id="1" name="routing" on="post" off="pre" />
+                <Value val="1" name="post" />
+                <Value val="0" name="pre" />
+            </BinarySetting>
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="2" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="FILL_ME_IN" />
+            <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="FILL_ME_IN" />
+        </Model>
+    </FxBank>
+    -->
+</FxBanks>
