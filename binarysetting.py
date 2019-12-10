@@ -15,18 +15,6 @@ class BinarySetting(setting.Setting):
     def __init__(self, config_data):
         super.__init__(config_data)
 
-        self._on  = None
-        self._off = None
-
-        self.__binaryFromConfigData(config_data)
-        
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def __binaryFromConfigData(self, config_data):
-        # at this point it's a settings map
         self._on = config_data['on']
         self._off= config_data['off']
 

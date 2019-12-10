@@ -16,16 +16,6 @@ class MultiSetting(setting.Setting):
     def __init__(self, config_data):
         super.__init__(config_data)
 
-        self._data = None
-
-        self.__multiFromConfigData(config_data)
-        
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def __multiFromConfigData(self, config_data):
         self._data = copy.deepcopy(config_data['values'])
 
     '''

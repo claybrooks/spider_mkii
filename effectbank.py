@@ -1,41 +1,30 @@
+import model
 
 '''
 ########################################################################################################################
 #                                                                                                                      #
 ########################################################################################################################
 '''
-class Setting(object):
+class EffectBank(object):
 
     '''
     ####################################################################################################################
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def __init__(self, config_data):
+    def __init__(self, models):
 
-        self._outer_id  = config_data['outer_id']
-        self._id        = config_data['id']
-        self._name      = config_data['name']
-        self._type      = config_data['type']
-
-        self._rawValue  = None
-        
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def validateValue(self, newValue):
-        raise NotImplementedError("Please Implement Validate")
+        self._models = {}
+        for id, modelConfig in models.items():
+            self._models[id] = model.Model(modelConfig)
 
     '''
     ####################################################################################################################
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def setValue(self, newValue):
-        if not self.validateValue(newValue):
-            return False
-        
-        self._rawValue = newValue
-        return True
+    def getModel(self, id):
+        if id not in self._models.keys():
+            return None
+
+        return self._models[id]

@@ -4,6 +4,8 @@ import knob
 
 import spider_mkii_model
 
+import effectbank
+
 '''
 ########################################################################################################################
 #                                                                                                                      #
@@ -105,7 +107,11 @@ class SpiderMKii(object):
         for id, name in SpiderMKii.knobs.items():
             self._knobs[id] = knob.Knob(id, name, 0)
 
+        self._effectBanks = {}
         fxBanks = spider_mkii_model.parseXml('spider_mkii_model.xml')
+
+        for id, fxBank in fxBanks.items():
+            self._effectBanks[id] = effectbank.EffectBank(fxBank)
 
         self.connect()
 
@@ -248,8 +254,11 @@ class SpiderMKii(object):
     '''
     def getSelection(self, choice):
 
+        if not self.isReadable() or not self.isWriteable():
+            return None
+
         # get status of something
-        self.write(self.getSelectionBuffer(choice))
+        self.__write(self.getSelectionBuffer(choice))
 
         shouldRead = True
         toReturn = []
@@ -257,7 +266,7 @@ class SpiderMKii(object):
         # read until we fail
         while shouldRead:
             # get read flag and data
-            shouldRead, data = self.read()
+            shouldRead, data = self.__read()
 
             # if we got data, append to our return list
             if shouldRead:
@@ -295,12 +304,12 @@ class SpiderMKii(object):
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def __read(self, timeout):
+    def __read(self):
         # helper return value
         bad_read = (False, None)
         
         try:
-            return (True, self._dev.read(self._ep_in.bEndpointAddress, self._ep_in.wMaxPacketSize, timeout))
+            return (True, self._dev.read(self._ep_in.bEndpointAddress, self._ep_in.wMaxPacketSize))
         except Exception:
             return bad_read
 
@@ -309,18 +318,18 @@ class SpiderMKii(object):
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def read(self, timeout = None):
+    def read(self):
         if not self.isReadable():
             return False, None
 
-        return self.__read(timeout=timeout)
+        return self.__read()
             
     '''
     ####################################################################################################################
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def __write(self, data, timeout=1):
+    def __write(self, data):
 
         try:
             self._dev.write(self._ep_out.bEndpointAddress, data)
@@ -333,9 +342,9 @@ class SpiderMKii(object):
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def write(self, data, timeout = 1):
+    def write(self, data):
 
         if not self.isWriteable():
             return False
 
-        return self.__write(data, timeout)
+        return self.__write(data)

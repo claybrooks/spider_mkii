@@ -61,20 +61,10 @@ class Model(object):
     '''
     def __init__(self, config_data):
         
-        self._name = None
-        self._id = None
-        
-        self._settings = {}
-
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################\
-    '''
-    def __fromConfigData(self, config_data):
         self._name = config_data['name']
         self._id = config_data['id']
 
+        self._settings = {}
         for outerIdIdPair, settingData in config_data['settings']:
             self._settings[outerIdIdPair] = Model.settings[settingData['type']]
 
