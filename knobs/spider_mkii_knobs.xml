@@ -1,0 +1,12 @@
+<Knobs id="54">
+    <Knob id="11" name="MODE" />
+    <Knob id="13" name="DRIVE" />
+    <Knob id="14" name="BASS" />
+    <Knob id="15" name="MID" />
+    <Knob id="16" name="TREBLE" />
+    <Knob id="17" name="CHANNEL_VOL" />
+    <Knob id="18" name="REVERB" />
+    <Knob id="27" name="GAIN_AUTO_PITCH" />
+    <Knob id="96" name="CHORUS_PHASER_TREMOLO" />
+    <Knob id="30" name="DELAY_TAPE_SWEEP" />
+</Knobs>

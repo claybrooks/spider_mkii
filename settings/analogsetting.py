@@ -1,12 +1,11 @@
-import setting
-import copy
+import settings.setting as setting
 
 '''
 ########################################################################################################################
 #                                                                                                                      #
 ########################################################################################################################
 '''
-class MultiSetting(setting.Setting):
+class AnalogSetting(setting.Setting):
     
     '''
     ####################################################################################################################
@@ -14,9 +13,20 @@ class MultiSetting(setting.Setting):
     ####################################################################################################################
     '''
     def __init__(self, config_data):
-        super.__init__(config_data)
+        super().__init__(config_data)
 
-        self._data = copy.deepcopy(config_data['values'])
+        self._analogMin = float(int(config_data['analogMin'], 16))
+        self._analogMax = float(int(config_data['analogMax'], 16))
+        self._valueType = config_data['valueType']
+        self._valueMin  = float(config_data['valueMin'])
+        self._valueMax  = float(config_data['valueMax'])
+
+        
+        self._adjustedAnalogMin = 0
+        self._adjustedAnalogMax = self._analogMax - self._analogMin
+
+        self._adjustedValueMin = 0
+        self._adjustedValueMax = self._valueMax - self._valueMin
 
     '''
     ####################################################################################################################
@@ -24,7 +34,11 @@ class MultiSetting(setting.Setting):
     ####################################################################################################################
     '''
     def getValue(self):
-        return self._data[self._rawValue]
+        percentAnalogApplied = (self._rawValue - self._analogMin) / (self._adjustedMax)
+
+        valueApplied = (self._adjustedValueMax * percentAnalogApplied) + self._adjustedValueMin
+
+        return valueApplied
 
     '''
     ####################################################################################################################
@@ -32,4 +46,4 @@ class MultiSetting(setting.Setting):
     ####################################################################################################################
     '''
     def validateValue(self, value):
-        return (value in self._data.keys())
+        return (value >= self._analogMin) or (value <= self._analogMax)

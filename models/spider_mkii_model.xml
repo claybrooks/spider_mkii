@@ -143,7 +143,11 @@
             <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="3" name="heel" />
             <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="4" name="toe" />
             <Setting type="analog" analogMin="0" analogMax="0x7F7F7F" valueType="percentage" valueMin="0" valueMax="100" outer_id="32" id="5" name="mix" />
-            <Setting type="ternary" outer_id="32" id="1" name="fbv control" left="no_ctrl" mid="wahglide" right="volglide" />
+            <Setting type="multi" outer_id="32" id="1" name="fbv control">
+                <Value id="0" val="no_ctrl" />
+                <Value id="1" val="wahglide" />
+                <Value id="2" val="volglide" />
+            </Setting>
         </Model>
 
         <Model name ="SMART_HARMONY" id="6">

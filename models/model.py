@@ -1,7 +1,7 @@
-import setting
-import binarysetting
-import analogsetting
-import multisetting
+import settings.setting         as setting
+import settings.binarysetting   as binarysetting
+import settings.analogsetting   as analogsetting
+import settings.multisetting    as multisetting
 
 '''
 ########################################################################################################################
@@ -10,7 +10,7 @@ import multisetting
 '''
 class Model(object):
 
-    settings = {
+    typeMap = {
         'binary': binarysetting.BinarySetting,
         'analog': analogsetting.AnalogSetting,
         'multi' : multisetting.MultiSetting,
@@ -65,8 +65,8 @@ class Model(object):
         self._id = config_data['id']
 
         self._settings = {}
-        for outerIdIdPair, settingData in config_data['settings']:
-            self._settings[outerIdIdPair] = Model.settings[settingData['type']]
+        for outerIdIdPair, settingData in config_data['settings'].items():
+            self._settings[outerIdIdPair] = Model.typeMap[settingData['type']](settingData)
 
     '''
     ####################################################################################################################

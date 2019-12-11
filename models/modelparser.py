@@ -1,4 +1,5 @@
 import lxml.etree as et
+import copy
 
 def parseXml(xmlFilePath):
 
@@ -34,14 +35,16 @@ def parseXml(xmlFilePath):
 
             for settingXml in modelXml.iter('Setting'):
                 outerId = settingXml.attrib['outer_id']
-                id = settingXml.attrib['id']
+                id      = settingXml.attrib['id']
+                type    = settingXml.attrib['type']
 
-                settings[(int(outerId), int(id))] = {}
-                setting = settings[(int(outerId), int(id))]
+                settings[(int(outerId), int(id))] = copy.deepcopy(settingXml.attrib)
 
-                for name, value in settingXml.attrib.items():
-                    setting[name] = value
+                if type == 'multi':
+                    settings[(int(outerId), int(id))]['values'] = {}
 
+                    for value in settingXml.iter('Value'):
+                        settings[(int(outerId), int(id))]['values'][value.attrib['id']] = copy.deepcopy(value.attrib)
     return toReturn
 
 

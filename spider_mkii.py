@@ -1,10 +1,11 @@
 
 import usb
-import knob
 
-import spider_mkii_model
+import knobs.knobparser     as knobparser
+import knobs.knobbank       as knobbank
 
-import effectbank
+import models.modelparser   as modelparser
+import models.modelbank     as modelbank
 
 '''
 ########################################################################################################################
@@ -23,7 +24,6 @@ class SpiderMKii(object):
     preset_prefix           = 60#192
 
     # For the three knobs that have three different modes each
-    # TODO Figure out the API for these
     effect_mode_prefix  = 54
     MODE_OFF            = 0
     MODE_GAIN           = 1
@@ -47,33 +47,6 @@ class SpiderMKii(object):
         MODE_DELAY:         'DELAY',
         MODE_TAPE_ECHO:     'TAPE_ECHO',
         MODE_SWEEP_ECHO:    'SWEEP_ECHO',
-    }
-
-    # For each single knob on the front of the amp
-    KNOB_MODE                   = 11
-    KNOB_DRIVE                  = 13
-    KNOB_BASS                   = 14
-    KNOB_MID                    = 15
-    KNOB_TREBLE                 = 16
-    KNOB_CHANNEL_VOL            = 17
-    KNOB_REVERB                 = 18
-    KNOB_GAIN_AUTO_PITCH        = 27
-    KNOB_CHORUS_PHASER_TREMOLO  = 96
-    KNOB_DELAY_TAPE_SWEEP       = 30
-
-    # TODO Figure out what the 176 is after the 59
-    knob_prefix = 59 # 176
-    knobs = {
-        KNOB_MODE:                  'MODE',
-        KNOB_DRIVE:                 'DRIVE',
-        KNOB_BASS:                  'BASS',
-        KNOB_MID:                   'MID',
-        KNOB_TREBLE:                'TREBLE',
-        KNOB_CHANNEL_VOL:           'CHANNEL_VOL',
-        KNOB_REVERB:                'REVERB',
-        KNOB_GAIN_AUTO_PITCH:       'GAIN_AUTO_PITCH',
-        KNOB_CHORUS_PHASER_TREMOLO: 'CHORUS_PHASER_TREMOLO',
-        KNOB_DELAY_TAPE_SWEEP:      'DELAY_TAPE_SWEEP',
     }
 
     '''
@@ -101,17 +74,20 @@ class SpiderMKii(object):
         self._curr_preset_id                    = 0
 
         # datastore
-        self._knobs = {}
+        #self._knobBank = knobbank.KnobBank('spider_mkii_knobs.xml')
 
         # create our knobs
-        for id, name in SpiderMKii.knobs.items():
-            self._knobs[id] = knob.Knob(id, name, 0)
+        #for id, name in SpiderMKii.knobs.items():
+        #    self._knobs[id] = knob.Knob(id, name, 0)
 
-        self._effectBanks = {}
-        fxBanks = spider_mkii_model.parseXml('spider_mkii_model.xml')
+        self._modelBanks = {}
 
-        for id, fxBank in fxBanks.items():
-            self._effectBanks[id] = effectbank.EffectBank(fxBank)
+        configData = modelparser.parseXml('models/spider_mkii_model.xml')
+        for id, config in configData.items():
+            self._modelBanks[id] = modelbank.ModelBank(config['models'])
+
+        configData = knobparser.parseXml('knobs/spider_mkii_knobs.xml')
+        self._knobBank = knobbank.KnobBank(configData)
 
         self.connect()
 
