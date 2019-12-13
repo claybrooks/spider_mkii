@@ -262,6 +262,10 @@
     <ModelBank id="17">
         <Settings>
             <Setting type="binary" outer_id="17" id="1" name="routing" on="post" off="pre" />
+            <Setting type="multi" outer_id="17" id="4" name="TapCtl">
+                <Value id="0" val="Don't Control" />
+                <Value id="1" val="Control" />
+            </Setting>
             <Setting type="multi" name="model" outer_id="17" id="0">
                 <Value val="SINE_CHORUS"            id="7" />
                 <Value val="L6_FLANGER"             id="8" />
@@ -287,135 +291,159 @@
         <Models>
             <Model name="SINE_CHORUS" id="7">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x7F6C35" valueType="hz" valueMin="0.1" valueMax="20" outer_id="33" id="1" name="speed" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="bass" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="treble" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="L6_FLANGER" id="8">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x7F6C35" valueType="hz" valueMin="0.1" valueMax="20" outer_id="33" id="1" name="speed" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="ANALOG_CHORUS" id="39">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="bass" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="treble" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="SQUARE_CHORUS" id="45">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="pre_delay" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="ANALOG_SQUARE_CHORUS" id="40">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="bass" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="treble" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="RANDOM_CHORUS" id="44">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="bass" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="treble" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="EXPONENTIAL_CHORUS" id="42">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="pre_delay" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="JET_FLANGER" id="41">
-                <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+            <Settings>
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="manual" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="EXPO_FLANGER" id="43">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="pre_delay" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="SQUARE_FLANGER" id="46">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="pre_delay" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="PHASER" id="9">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="U_VIBE" id="10">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="LUMPY_PHASE" id="47">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="bass" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="treble" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="WARBLE_MATIC" id="50">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="Q" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="RANDOM_S_H" id="36">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="Q" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="TAPE_EATER" id="49">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="flutter" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="distortion" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="PURPLE_X" id="48">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="500" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="depth" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="feedback" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="OPTO_TREMOLO" id="11">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="wave" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
             <Model name="BIAS_TREMOLO" id="12">
                 <Settings>
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="3" name="FILL_ME_IN" />
-                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="4" name="FILL_ME_IN" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="17" id="6" name="tempo" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="2" name="wave" />
+                    <Setting type="analog" analogMin="0" analogMax="0x1FFFFF" valueType="percentage" valueMin="0" valueMax="100" outer_id="33" id="0" name="mix" />
                 </Settings>
             </Model>
         </Models>
