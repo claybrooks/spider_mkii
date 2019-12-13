@@ -49,6 +49,17 @@ class SpiderMKii(object):
         MODE_SWEEP_ECHO:    'SWEEP_ECHO',
     }
 
+    modelBankIdMap = {
+        16: 16,
+        32: 16,
+        17: 17,
+        33: 17,
+        18: 18,
+        34: 18,
+        19: 19,
+        35: 19,
+    }
+
     '''
     ####################################################################################################################
     #                                                                                                                  #
@@ -83,8 +94,9 @@ class SpiderMKii(object):
         self._modelBanks = {}
 
         configData = modelparser.parseXml('models/spider_mkii_model.xml')
-        for id, config in configData.items():
-            self._modelBanks[id] = modelbank.ModelBank(config['models'])
+        self._modelBanksPrefix = int(configData['id'])
+        for id, config in configData['modelBanks'].items():
+            self._modelBanks[int(id)] = modelbank.ModelBank(config)
 
         configData = knobparser.parseXml('knobs/spider_mkii_knobs.xml')
         self._knobBank = knobbank.KnobBank(configData)
@@ -139,74 +151,6 @@ class SpiderMKii(object):
     #                                                                                                                  #
     ####################################################################################################################
     '''
-    def __handleKnobs(self, data):
-
-        id  = data[2]
-        val = data[3]
-
-        if id not in self._knobs.keys():
-            print (f'Unknown Knob ID: {id}')
-            print (data)
-            return
-
-        self._knobs[id].setValue(val)
-
-        ''' if id == 27:
-            print (f'{effect_mode[curr_gain_auto_pitch_mode]}: {val}')
-        elif id == 96:
-            print (f'{effect_mode[curr_chorus_phaser_tremolo_mode]}: {val}')
-        elif id == 30:
-            print (f'{effect_mode[curr_delay_tape_sweep_mode]}: {val}')
-        else:'''
-
-        print (self._knobs[id])
-
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def __handleEffectMode(self, data):
-        
-        mode_val = data[1]
-
-        if mode_val == 0:
-            self._curr_delay_tape_sweep_mode        = 0
-            self._curr_chorus_phaser_tremolo_mode   = 0
-            self._curr_gain_auto_pitch_mode         = 0
-        elif mode_val <= 5:
-            self._curr_gain_auto_pitch_mode         = mode_val
-        elif mode_val <= 11:
-            self._curr_chorus_phaser_tremolo_mode   = mode_val
-        elif mode_val <= 17:
-            self._curr_delay_tape_sweep_mode        = mode_val
-
-        print (data)
-
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def __handleChorusPhaserTremolo(self, data):
-        if self._curr_gain_auto_pitch_mode != data[1]:
-            self._curr_gain_auto_pitch_mode = data[1]
-            print (f'CHORUS_PHASER_TREMOLO MODE: {SpiderMKii.effect_mode[self._curr_chorus_phaser_tremolo_mode]}')
-    
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
-    def __handlePreset(self, data):
-        self._curr_preset_id = data[2]
-        print (f'Preset: {self._curr_preset_id}')
-
-    '''
-    ####################################################################################################################
-    #                                                                                                                  #
-    ####################################################################################################################
-    '''
     def handleIncomingData(self, data):
 
         if data == None or len(data) == 0:
@@ -214,13 +158,20 @@ class SpiderMKii(object):
 
         id = data[0]
 
-        if id == SpiderMKii.knob_prefix:
-            self.__handleKnobs(data)
-        elif id == SpiderMKii.effect_mode_prefix:
-            self.__handleEffectMode(data)
-        elif id == SpiderMKii.preset_prefix:
-            self.__handlePreset(data)
-        else:
+        handled = False
+
+        if id == self._knobBank.getId():
+            self._knobBank.handleData(data)
+            handled = True
+        elif id == self._modelBanksPrefix:
+            if data[11] in SpiderMKii.modelBankIdMap.keys():
+                modelBankId = SpiderMKii.modelBankIdMap[data[11]]
+
+                if modelBankId in self._modelBanks.keys():
+                    self._modelBanks[modelBankId].handleData(data)
+                    handled = True
+
+        if not handled:
             print (data)
 
     '''

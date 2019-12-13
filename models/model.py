@@ -1,4 +1,4 @@
-import settings.setting         as setting
+import settings.typemap         as typeMap
 import settings.binarysetting   as binarysetting
 import settings.analogsetting   as analogsetting
 import settings.multisetting    as multisetting
@@ -9,12 +9,6 @@ import settings.multisetting    as multisetting
 ########################################################################################################################
 '''
 class Model(object):
-
-    typeMap = {
-        'binary': binarysetting.BinarySetting,
-        'analog': analogsetting.AnalogSetting,
-        'multi' : multisetting.MultiSetting,
-    }
 
     # SETTINGS SELECTION
     SETTINGS_FX_1   = [[52, 99, 0, 16], [52, 99, 0, 32]]
@@ -65,15 +59,28 @@ class Model(object):
         self._id = config_data['id']
 
         self._settings = {}
-        for outerIdIdPair, settingData in config_data['settings'].items():
-            self._settings[outerIdIdPair] = Model.typeMap[settingData['type']](settingData)
+        for id, settingConfig in config_data['settings'].items():
+            self._settings[id] = typeMap.typeMap[settingConfig['type']](settingConfig)
 
     '''
     ####################################################################################################################
     #                                                                                                                  #
     ####################################################################################################################\
     '''
+    def getSetting(self, key):
+        if key not in self._settings.keys():
+            return None
+
+        return self._settings[key]
+    '''
+    ####################################################################################################################
+    #                                                                                                                  #
+    ####################################################################################################################\
+    '''
     def setSettingValue(self, key, value):
+        if key not in self._settings.keys():
+            return False
+
         return self._settings[key].setValue(value)
 
     '''
@@ -82,4 +89,7 @@ class Model(object):
     ####################################################################################################################\
     '''
     def getSettingValue(self, key):
+        if key not in self._settings.keys():
+            return None
+            
         return self._settings[key].getValue()

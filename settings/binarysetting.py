@@ -35,4 +35,5 @@ class BinarySetting(setting.Setting):
     ####################################################################################################################
     '''
     def validateValue(self, value):
+
         return (value == 1) or (value == 0)

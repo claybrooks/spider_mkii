@@ -14,4 +14,10 @@ data = amp.getSelection(0)
 while True:
     success, data = amp.read()
     if success:
+        # special case where we need more data
+        if data[0] == 52 and data[1] == 240:
+            while len(data) < 20:
+                _, more = amp.read()
+                data.extend(more)
+            
         amp.handleIncomingData(data)

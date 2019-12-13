@@ -25,7 +25,7 @@ class AnalogSetting(setting.Setting):
         self._adjustedAnalogMin = 0
         self._adjustedAnalogMax = self._analogMax - self._analogMin
 
-        self._adjustedValueMin = 0
+        self._adjustedValueMin = 0 
         self._adjustedValueMax = self._valueMax - self._valueMin
 
     '''
@@ -34,9 +34,9 @@ class AnalogSetting(setting.Setting):
     ####################################################################################################################
     '''
     def getValue(self):
-        percentAnalogApplied = (self._rawValue - self._analogMin) / (self._adjustedMax)
+        percentAnalogApplied = (self._rawValue - self._analogMin) / (self._adjustedAnalogMax)
 
-        valueApplied = (self._adjustedValueMax * percentAnalogApplied) + self._adjustedValueMin
+        valueApplied = (self._adjustedValueMax * percentAnalogApplied) + self._valueMin
 
         return valueApplied
 

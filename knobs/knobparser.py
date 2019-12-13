@@ -10,9 +10,14 @@ def parseXml(xmlFilePath):
         print (e)
         return
 
+    id = int(knobs.attrib['id'])
+
     toReturn = {}
 
+    toReturn['knobs'] = {}
+
+    toReturn['id'] = id
     for knob in knobs.iter('Knob'):
-        toReturn[int(knob.attrib['id'])] = copy.deepcopy(knob.attrib)
+        toReturn['knobs'][int(knob.attrib['id'])] = copy.deepcopy(knob.attrib)
 
     return toReturn

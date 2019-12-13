@@ -16,7 +16,10 @@ class MultiSetting(setting.Setting):
     def __init__(self, config_data):
         super().__init__(config_data)
 
-        self._data = copy.deepcopy(config_data['values'])
+        self._data = {}
+        
+        for id, value in config_data['values'].items():
+            self._data[int(id)] = value['val']
 
     '''
     ####################################################################################################################
