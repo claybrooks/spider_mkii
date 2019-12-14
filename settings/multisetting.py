@@ -19,7 +19,10 @@ class MultiSetting(setting.Setting):
         self._data = {}
         
         for id, value in config_data['values'].items():
-            self._data[int(id)] = value['val']
+            try:
+                self._data[int(id)] = value['val']
+            except ValueError:
+                self._data[int(id, 16)] = value['val']
 
     '''
     ####################################################################################################################

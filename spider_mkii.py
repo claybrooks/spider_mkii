@@ -58,6 +58,8 @@ class SpiderMKii(object):
         34: 18,
         19: 19,
         35: 19,
+        20: 20,
+        36: 20,
     }
 
     '''
@@ -164,12 +166,14 @@ class SpiderMKii(object):
             self._knobBank.handleData(data)
             handled = True
         elif id == self._modelBanksPrefix:
-            if data[11] in SpiderMKii.modelBankIdMap.keys():
-                modelBankId = SpiderMKii.modelBankIdMap[data[11]]
+            
+            objectId = data[11]
+            if objectId in SpiderMKii.modelBankIdMap.keys():
+                objectId = SpiderMKii.modelBankIdMap[data[11]]
 
-                if modelBankId in self._modelBanks.keys():
-                    self._modelBanks[modelBankId].handleData(data)
-                    handled = True
+            if objectId in self._modelBanks.keys():
+                self._modelBanks[objectId].handleData(data)
+                handled = True
 
         if not handled:
             print (data)

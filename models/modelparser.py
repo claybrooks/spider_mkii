@@ -1,6 +1,6 @@
 import lxml.etree as et
 import copy
-  
+
 '''
 ########################################################################################################################
 #                                                                                                                      #
@@ -25,7 +25,19 @@ def parseXml(xmlFilePath):
     toReturn['modelBanks'] = {}
     modelBanks = toReturn['modelBanks']
 
-    for modelBankXml in modelBanksXml.iter('ModelBank'):
+    parseModelBanks(modelBanksXml, modelBanks)
+
+    return toReturn
+
+'''
+########################################################################################################################
+#                                                                                                                      #
+########################################################################################################################
+'''
+def parseModelBanks(xml, modelBanks):
+
+    for modelBankXml in xml.iter('ModelBank'):
+
         # get the id for this model bank
         id = int(modelBankXml.attrib['id'])
 
@@ -41,7 +53,6 @@ def parseXml(xmlFilePath):
         parseSettings(modelBankXml.find('Settings'), settings)
         parseModels(modelBankXml.find('Models'), models)
 
-    return toReturn
 '''
 ########################################################################################################################
 #                                                                                                                      #

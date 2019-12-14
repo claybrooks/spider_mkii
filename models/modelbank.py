@@ -74,7 +74,7 @@ class ModelBank(object):
     def getSelectedModel(self):
         id = (self._id, ModelBank.currentModelId)
         if id not in self._settings:
-            raise ('Invalid Hardcoded ID.  Please check')
+            return None
         return self._settings[id].getRawValue()
        
     '''
@@ -87,7 +87,7 @@ class ModelBank(object):
         # xml
         id          = (data[11], data[13])
         if (data[14] == 64) and (data[15] == 0):
-            value = -1 * data[17]
+            value = -1 * (data[15] << 7) | (data[17])
         else:
             value = (data[14] << 14) | (data[15] << 7) | (data[17])
 
